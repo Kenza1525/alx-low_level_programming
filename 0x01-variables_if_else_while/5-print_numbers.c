@@ -8,7 +8,7 @@ int main(void)
 {
 	int decimal = 0;
 
-	while(decimal <= 9)
+	while (decimal <= 9)
 	{
 		printf("%d", decimal);
 		decimal++;
