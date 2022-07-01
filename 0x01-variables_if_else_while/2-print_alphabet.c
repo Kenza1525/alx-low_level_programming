@@ -7,9 +7,7 @@
  * Return: Always 0 (success)
  */
 int main(void)
-{
-	
-	char alpha;
+{char alpha;
 
 	srand(time(0));
 	alpha = 'a';
