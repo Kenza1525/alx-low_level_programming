@@ -1,36 +1,30 @@
 #include <stdio.h>
 /**
- * main -> prints all possible of two digits number from 0-99
+ * main -> Prints all possible combination of two digits from 0-99
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int digit1 = 0;
-	int digit2 = 0;
+	int num1;
+	int num2;
 
-	while (digit1 <= 98)
+	for (num1 = 0; num1 <= 98; num1++)
 	{
-		while (digit2 <= 99)
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
-			if (digit1 < digit2)
-			{
-				putchar((digit1 / 10) + '0');
-				putchar((digit1 % 10) + '0');
-				putchar(' ');
-				putchar((digit2 / 10) + '0');
-				putchar((digit2 % 10) + '0');
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar (' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
 
-				if (digit1 != 98)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			digit2++;
+			if ((num1 == 98) && (num2 == 99))
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
-		digit1++;
-
 	}
 	putchar('\n');
 	return (0);
