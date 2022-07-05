@@ -1,13 +1,12 @@
 #include "main.h"
-
 /**
- * print_alphabet_x10 -> prints alphabet in lower case 10 times
+ * print_alphabet_x10 -> prints alphabets lower case 10 times
  *
  * Return: 0
  */
 void print_alphabet_x10(void)
 {
-	int i;
+	int i = 0;
 
 	while (i < 10)
 	{
@@ -18,7 +17,7 @@ void print_alphabet_x10(void)
 			_putchar(c);
 			c++;
 		}
-		_putchar('\n');
 		i++;
+		_putchar('\n');
 	}
 }
