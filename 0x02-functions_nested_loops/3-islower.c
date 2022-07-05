@@ -5,7 +5,7 @@
  * Return: 1 in case of a lower case, and 0 otherwise
  */
 
-int_islower(int c)
+int _islower(int c)
 {
 	char i;
 	int check = 0;
