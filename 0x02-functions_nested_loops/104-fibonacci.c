@@ -32,7 +32,7 @@ int main(void)
 		sum_last = (x_last + y_last) - (1000000000 * ovr_flow);
 		sum_first = (x_first + y_first) + ovr_flow;
 
-		printf(", %lu%lu", sum_first, sum_first);
+		printf(", %lu%lu", sum_first, sum_last);
 
 		x_first = y_first;
 		x_last = y_last;
