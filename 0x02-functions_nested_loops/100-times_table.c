@@ -1,15 +1,13 @@
 #include "main.h"
 /**
- * print_times_table - prints the n table only if 0 < n < 15
- * @n: the variable to replace
+ * print_times_table - prints the n times table when n is 0 < n < 15
+ * @n: integer argument
  *
  * Return: 0
  */
 void print_times_table(int n)
 {
-	int x;
-	int y;
-	int product;
+	int x, y, product;
 
 	if (n >= 0 && n <= 15)
 	{
@@ -20,7 +18,7 @@ void print_times_table(int n)
 				product = x * y;
 				if (y == 0)
 				{
-					_putchar(product + '0');
+					_putchar('0' + product);
 				}
 				else
 				{
@@ -30,7 +28,7 @@ void print_times_table(int n)
 					{
 						_putchar(' ');
 						_putchar(' ');
-						_putchar(product + '0');
+						_putchar('0' + product);
 					}
 					else if (product > 9 && product < 100)
 					{
@@ -47,5 +45,5 @@ void print_times_table(int n)
 				}
 			}
 		}
-	}		
+	}
 }
