@@ -1,7 +1,8 @@
 #ifndef MAIN_H
-#define Main_H
+#define MAIN_H
 
-int _isdigit(int c);
 int _putchar(char c);
+int _isdigit(int c);
+
 
 #endif
