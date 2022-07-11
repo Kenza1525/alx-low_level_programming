@@ -11,7 +11,7 @@ int _atoi(char *s)
 	int i, diff, result;
 
 	i = 0;
-	diff = 0; 
+	diff = 0;
 	result = 0;
 	test = 0;
 	diff = -1;
