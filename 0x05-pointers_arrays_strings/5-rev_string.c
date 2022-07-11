@@ -24,5 +24,6 @@ void rev_string(char *s)
 		index--;
 		n++;
 	}
+	s[n++] = '\0';
 
 }
