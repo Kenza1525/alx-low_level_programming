@@ -14,19 +14,19 @@ int main(void)
 	char arr2[1000];
 
 	srand(time(NULL));
-	while (s != 2000)
+	while (s != 2772)
 	{
 		i = k = s = 0;
-		while ((2000 - 120) > s)
+		while ((2772 - 122) > s)
 		{
-			j = rand() % 48;
+			j = rand() % 62;
 			arr2[i] = arr1[j];
 			s += arr1[j];
 			i++;
 		}
 		while (arr1[k])
 		{
-			if (arr1[k] == (2000 - s))
+			if (arr1[k] == (2772 - s))
 			{
 				arr2[i] = arr1[k];
 				s += arr1[k];
