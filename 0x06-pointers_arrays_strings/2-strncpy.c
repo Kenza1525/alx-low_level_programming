@@ -1,4 +1,4 @@
-#nclude"main.h"
+#include"main.h"
 /**
  * _strncpy - copies a string
  * @dest: pointer that stores a string
@@ -8,8 +8,7 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *_strncpy(char *dest, char *src, int n)
-{
+
 	int i = 0;
 
 	while (src[i] != '\0' && i < n)
@@ -24,5 +23,5 @@ char *_strncpy(char *dest, char *src, int n)
 		i++;
 	}
 	return (dest);
-}
+
 }
