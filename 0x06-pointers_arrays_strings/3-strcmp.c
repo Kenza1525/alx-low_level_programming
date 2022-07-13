@@ -8,22 +8,17 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i;
-	int diff;
-
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0')
+	while ((*s1 != '\0' && *s2 != '\0') && *s1 == *s2)
 	{
-		if (s1[i] != s2[i])
-		{
-			diff = s1[i] - s2[i];
-			break;
-		}
-		else
-		{
-			return (0);
-		}
-		i++;
+		s1++;
+		s2++;
 	}
-	return (diff);
+	if (*s1 == *s2)
+	{
+		return (0);
+	}
+	else
+	{
+	return (*s1 - *s2);
+	}
 }
