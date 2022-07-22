@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int i;
 	int product;
 
-	product = atoi(argv[1] * argv[2];
+	product = atoi(argv[1]) * atoi(argv[2]);
 	if (argc != 3)
 	{
 		printf("Error\n");
