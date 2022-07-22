@@ -1,38 +1,56 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+
 /**
- * main - print the sum
+ * tst_num - test if it's a number
+ * @array: array of numbers
+ * Return: true only if entire string is a number, false if not
+ */
+
+bool test(char *array)
+{
+	int j = 0;
+
+	for (j = 0; array[j]; j++)
+	{
+		if (!(array[j] >= '0' && array[j] <= '9'))
+			return (0);
+	}
+	return (1);
+}
+
+/**
+ * main - print sum if all arguments given are numbers
  * @argc: argv size
- * @argv: array 
- * Return: 1 or 0
+ * @argv: array
+ * Return: 0 on success, 1 if there is an error
  */
 
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i = 1;
 	int sum = 0;
 
-	for (i = 1; i < argc; i++)
-	{
-		for (j = 0; argv[i][j] != '\0'; j++)
-		{
-			if (argv[i][j] < '0' || argv[i][j] > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-			sum += atoi(argv[i]);
-	}
-
-	if (argc < 2)
+	if (argc == 1)
 	{
 		printf("0\n");
+		return (0);
 	}
-	else
+
+	while (i < argc)
 	{
-		printf("%i\n", sum);
+		if (is_num(argv[i]))
+		{
+			sum += atoi(argv[i]);
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+		i++;
 	}
+	printf("%d\n", sum);
 	return (0);
 }
