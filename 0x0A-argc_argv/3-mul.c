@@ -6,21 +6,22 @@
  * @argc: argv size
  * @argv: arry of pointers
  *
- * Return: 0
+ * Return: 0 or 1 in case of an erroet
  */
 int main(int argc, char *argv[])
 {
 	int i;
 	int product;
 
-	product = 1;
-
-	if (argc > 1)
+	product = atoi(argv[1] * argv[2];
+	if (argc != 3)
 	{
-		for (i = 1; i < argc; i++)
-		{
-			product *= atoi(argv[i]);
-		}
+		printf("Error\n");
+		return (1);
+
+	}
+	else
+	{
 		printf("%d\n", product);
 	}
 	return (0);
