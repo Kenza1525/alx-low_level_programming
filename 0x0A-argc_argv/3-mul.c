@@ -2,27 +2,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - multiplies two numbers
+ * main - return mul of 2 numbers
  * @argc: argv size
- * @argv: arry of pointers
- *
- * Return: 0 or 1 in case of an erroet
+ * @argv: array of characters
+ * Return: 0 or 1 in case of an error
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	int product;
-
-	product = atoi(argv[1]) * atoi(argv[2]);
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
+	}
 
-	}
-	else
-	{
-		printf("%d\n", product);
-	}
+	printf("%i\n", atoi(argv[1]) * atoi(argv[2]));
+
 	return (0);
 }
