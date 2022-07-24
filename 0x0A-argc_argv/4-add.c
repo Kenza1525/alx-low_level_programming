@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 /**
- * tst_num - test if it's a number
+ * test - test if it's a number
  * @array: array of numbers
  * Return: true only if entire string is a number, false if not
  */
