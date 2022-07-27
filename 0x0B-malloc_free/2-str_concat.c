@@ -21,9 +21,9 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	while (s1[size1] != '\0')
+	while (*(s1 + size1))
 		size1++;
-	while (s2[size2] != '\0')
+	while (*(s2 + size2))
 		size2++;
 	size2++;
 
@@ -32,9 +32,9 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	for (i = 0; i < size1; i++)
-		conc[i] = s1[i];
+		*(conc + i) = *(s1 + i);
 	for (i = size1; i < (size1 + size2); i++)
-		*(conc + i) = *(s2 + i - size2);
+		*(conc + i) = *(s2 + i - size1);
 
 	return (conc);
 }
