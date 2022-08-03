@@ -1,6 +1,6 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
+#include <stdio.h>
 /**
  * main - operates two numbers.
  * @argc: argument counter.
@@ -38,3 +38,4 @@ int main(int argc, char **argv)
 	printf("%d\n", answer);
 	return (0);
 }
+
