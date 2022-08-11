@@ -1,4 +1,4 @@
-#include "stdio.h.h"
+#include "stdio.h"
 /**
  * print_str - free memory of all list.
  * void: pointer to head in fucntion
