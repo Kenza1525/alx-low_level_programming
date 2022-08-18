@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * binary_rep - recursion function to print bit 0 (acts as a mask)
