@@ -33,16 +33,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((unsigned char *)key, ht->size);
 	head = ht->array[index];
-
 	if (head == NULL)
 		ht->array[index] = elem;
 	else
 	{
-		while (head->next != NULL)
-		{
-			head = head->next;
-		}
-		head->next = elem;
+		elem->next = ht->array[index];
+		ht->array[index] = elem;
 	}
 	return (1);
 }
