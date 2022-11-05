@@ -33,6 +33,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((unsigned char *)key, ht->size);
 	head = ht->array[index];
+	while (head != NULL)
+	{
+		if (strcmp(head->key, key) == 0)
+		{
+			free(head->value);
+			head->value = elem->value;
+			return (1);
+		}
+	}
 	if (head == NULL)
 		ht->array[index] = elem;
 	else
