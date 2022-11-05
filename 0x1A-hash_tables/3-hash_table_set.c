@@ -35,7 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	head = ht->array[index];
 
 	if (head == NULL)
-		head = elem;
+		ht->array[index] = elem;
 	else
 	{
 		while (head->next != NULL)
