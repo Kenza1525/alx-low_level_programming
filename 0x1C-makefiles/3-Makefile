@@ -9,9 +9,9 @@ all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
 clean:
-	-${RM} -f *.swp ${NAME}
+	-${RM} -f *.~ ${NAME}
 oclean:
 	-${RM} -f ${OBJ}
 fclean: clean oclean
-	-${RM} -f *.swp ${NAME} ${OBJ}
-re: all
+	
+re: all fclean
