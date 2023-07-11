@@ -12,12 +12,11 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t first_element = 0;
 	size_t last_element = size - 1;
-	size_t mid_element;
 	size_t i;
 
 	while (first_element <= last_element)
 	{
-		mid_element = (first_element + last_element) / 2;
+		size_t mid_element = (first_element + last_element) / 2;
 		printf("Searching in array: ");
 
 		for (i = first_element; i < last_element + 1; i++)
